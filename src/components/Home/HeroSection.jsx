@@ -71,7 +71,9 @@ export default function HeroSection() {
                     </div>
 
                     <div className="flex items-center gap-3 p-3 rounded-2xl bg-base-100/60 backdrop-blur border border-base-300/50">
-                        <div className="p-2.5 rounded-xl bg-accent/10 text-accent">
+                    {/* bug-4 icon not claer  */}
+                        {/* <div className="p-2.5 rounded-xl bg-accent/10 text-accent"> */}
+                        <div className="p-2.5 rounded-xl bg-accent/10 text-secondary">
                             <Award className="w-5 h-5" />
                         </div>
                         <div>

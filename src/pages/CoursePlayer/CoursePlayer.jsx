@@ -141,7 +141,10 @@ export default function CoursePlayer() {
                                 <h3 className="card-title text-base sm:text-lg md:text-xl break-words">{lesson.title}</h3>
                                 <div className="bg-base-300 rounded overflow-hidden mt-2 sm:mt-4">
                                     <iframe
-                                        style={{ height: '700px', width: '300px' }}
+                                    // bug-7 video er width e kom cilo
+                                        // style={{ height: '700px', width: '300px' }}
+                                        style={{ height: '400px', width: '700px' }}
+                                      
                                         src={convertToEmbedUrl(lesson.videoUrl)}
                                         title={lesson.title}
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

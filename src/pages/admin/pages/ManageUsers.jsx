@@ -212,8 +212,8 @@ export default function ManageUsers() {
                                                     userItem.isBanned ? "opacity-60" : ""
                                                 }`}
                                             >
-                                                <td className="font-semibold">{userItem.name}</td>
-                                                <td style={{ color: '#1e293b' }}>{userItem.email}</td>
+                                                <td className="font-semibold ">{userItem.name}</td>
+                                                <td className="font-semibold">{userItem.email}</td>
                                                 <td>
                                                     <span
                                                         className={`badge badge-lg font-semibold ${

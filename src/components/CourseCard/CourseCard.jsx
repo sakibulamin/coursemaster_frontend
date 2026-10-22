@@ -32,7 +32,11 @@ export default function CourseCard({ course }) {
 
             <div className="card-body p-5 flex flex-col flex-1 justify-between space-y-4">
                 <div>
-                    <h2 className="card-title text-lg sm:text-xl font-bold leading-snug group-hover:text-primary transition-colors whitespace-nowrap overflow-visible">
+                    {/* bug-8 title card er bahire cole geche */}
+                    {/* <h2 className="card-title text-lg sm:text-xl font-bold leading-snug group-hover:text-primary transition-colors whitespace-nowrap overflow-visible">
+                        {course.title}
+                    </h2> */}
+                    <h2 className="card-title text-lg sm:text-xl font-bold leading-snug group-hover:text-primary transition-colors break-words [overflow-wrap:anywhere] line-clamp-2 min-h-[3.5rem]">
                         {course.title}
                     </h2>
 

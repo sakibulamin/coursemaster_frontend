@@ -318,9 +318,9 @@ export default function AdminOverview() {
                                 <div className="stat-title text-xs">Total Students</div>
                                 <div className="stat-value text-lg sm:text-2xl text-secondary">{analytics.stats?.totalStudents || 0}</div>
                             </div>
-                            <div className="stat bg-accent/10 rounded-lg p-3 sm:p-4">
+                            <div className="stat bg-secondary/10 rounded-lg p-3 sm:p-4">
                                 <div className="stat-title text-xs">Total Enrollments</div>
-                                <div className="stat-value text-lg sm:text-2xl text-accent">{analytics.stats?.totalEnrollments || 0}</div>
+                                <div className="stat-value text-lg sm:text-2xl text-secondary">{analytics.stats?.totalEnrollments || 0}</div>
                             </div>
                             <div className="stat bg-info/10 rounded-lg p-3 sm:p-4">
                                 <div className="stat-title text-xs">Last 30 Days</div>

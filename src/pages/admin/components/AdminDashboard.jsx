@@ -12,17 +12,19 @@ import AdminSidebar from "./AdminSidebar";
 export default function AdminDashboard() {
     const [me, setMe] = useState(null);
 
+ 
+
     useEffect(() => {
-        const loadMe = async () => {
-            try {
-                const res = await getMe();
-                setMe(res.data);
-            } catch (err) {
-                console.error("Failed to load user:", err);
-            }
-        };
-        loadMe();
-    }, []);
+    const loadMe = async () => {
+        try {
+            const res = await getMe();
+            setMe(res.data);
+        } catch (err) {
+            console.error("Failed to load user:", err);
+        }
+    };
+    loadMe();
+}, []);
 
     return (
         <AdminRoute me={me}>

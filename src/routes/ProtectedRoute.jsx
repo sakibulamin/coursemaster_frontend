@@ -36,6 +36,7 @@ export default function ProtectedRoute({ children }) {
       </div>
     );
   }
+  
 
   if (!isValid) {
     return <Navigate to="/login" replace />;
