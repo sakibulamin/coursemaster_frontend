@@ -2,17 +2,41 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { loginUser, registerUser, getMe } from "../../services/auth.api";
 import { getToken, saveToken, clearToken } from "../../utils/auth";
 
+// export const loginAsync = createAsyncThunk(
+//     "auth/login",
+//     async (credentials, { rejectWithValue }) => {
+//         try {
+//             const res = await loginUser(credentials);
+//             saveToken(res.data.token);
+//             return res.data;
+//         } catch (err) {
+//             return rejectWithValue(err.response?.data?.message || "Login failed");
+//         }
+//     }
+// );
+
 export const loginAsync = createAsyncThunk(
-    "auth/login",
-    async (credentials, { rejectWithValue }) => {
-        try {
-            const res = await loginUser(credentials);
-            saveToken(res.data.token);
-            return res.data;
-        } catch (err) {
-            return rejectWithValue(err.response?.data?.message || "Login failed");
-        }
+  "auth/login",
+  async (credentials, { rejectWithValue }) => {
+    try {
+      const res = await loginUser(credentials);
+
+      console.log("Login status:", res.status);
+      console.log(
+        "Login response keys:",
+        Object.keys(res.data || {})
+      );
+
+      saveToken(res.data.token);
+      return res.data;
+    } catch (err) {
+      console.error("Login failed:", err.response?.status);
+
+      return rejectWithValue(
+        err.response?.data?.message || "Login failed"
+      );
     }
+  }
 );
 
 export const registerAsync = createAsyncThunk(
